@@ -1,0 +1,12 @@
+{% extends 'sendto.html' %}
+{% block yesorno %}
+<br><br>
+<div class="receipt">
+<h1 style="background-color:#d91c35; margin:0; font-size:35px; padding:20px;">Transaction Unsuccessful</h1>
+{% if flag %}
+<p style="padding:20px;">Insufficient Balance</p>
+{% else %}
+<p style="padding:20px;">Please enter valid Amount!</p>
+{% endif %}
+</div>
+{% endblock %}

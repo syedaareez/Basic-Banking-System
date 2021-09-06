@@ -1,0 +1,141 @@
+body{
+    margin:0;
+    background-color:#222;
+    color:white;
+    font-family:"Verdana";
+}
+a{
+    text-decoration:none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+li a {
+  display:block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: rgb(50, 118, 227);
+  border-right:none;
+}
+.intro{
+    background-image:url("https://bopwebsitestorage.blob.core.windows.net/assets/images/8srZFd1ZLkSSysFZJIKvZ4TJxKBwS4HpRmyelQHS.jpeg");
+    height:611px;
+    background-size:cover;
+}
+.det{
+    font-family:"Monaco",sans-serif,monospace;
+    display:block;
+    margin:auto;
+    padding:20px;
+    margin-left:80px;
+    width:30%;
+    height:93.5%;
+    color:white;
+    background-color:rgba(0,0,0,0.4);
+    backdrop-filter:blur(4px);
+    vertical-align:center;
+    
+}
+#deta{
+    font-weight:bold;
+    font-size:42px;
+}
+#logo{
+    margin-top:30px;
+    margin-bottom:240px;
+    font-size:35px;
+}
+#logozee{
+    font-family:fantasy;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+    margin:auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border:1px solid #706e6e;
+}
+
+tr:nth-child(even){background-color: #4d4a4a}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.userlist{
+    text-align:center;
+}
+.sendto{
+    text-align:center;
+}
+.confirmbtn{
+    display:block;
+    background-color:#04AA6D;
+    color:white;
+    padding:8px;
+    font-weight:bold;
+    margin:auto;
+    margin-top:30px;
+}
+.select{
+    font-family:monospace;
+    padding:5px;
+    background-color:#333;
+    color:white;
+}
+.receipt{
+width:500px;
+margin:auto;
+text-align:left;
+border:1px solid grey;
+font-family:"Verdana";
+font-size:30px;
+color:white;
+}
+#receipthead{
+background-color:#04AA6D;
+padding-right:25px;
+padding-left:25px;
+
+}
+#rcdet{
+font-size:25px;
+padding:25px;
+}
+#rchead{
+color:rgba(255,255,255,0.5);
+font-size:15px;
+}
+.sendbtnn{
+    background-color:#555;
+    padding:5px;
+    color:white;
+    cursor:pointer;
+    margin:auto;
+    width:150px;
+}

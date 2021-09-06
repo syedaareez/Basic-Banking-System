@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+{% block content %}
+<div class="userlist">
+<h1>Users List</h1>
+<table>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Balance</th>
+    <th>Details</th>
+  </tr>
+    
+{% for singleUser in allusers %}
+<tr id="id{{singleUser.id}}"><td>{{singleUser.id}}</td><td>{{singleUser.name}}</td><td>{{singleUser.email}}</td><td>{{singleUser.balance}}</td><td><button class="sendbtnn" onclick="send({{singleUser.id}})">Details & Payment</button></td></tr>
+{% endfor %}
+        
+</table>
+    <br><br>
+    <script>
+        function send(e){
+            var id=e;
+            window.location.replace('/sendto/'+id);
+        }
+    </script>
+</div>
+{% endblock %}
+        

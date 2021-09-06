@@ -1,0 +1,16 @@
+{% extends 'sendto.html' %}
+{% block yesorno %}
+<br><br>
+<div class="receipt">
+    
+    <div id="receipthead"><p style="display:inline-block; ">Receipt</p><span style="display:inline-block; float:right"><p>Rs.{{receipt.amount}}</p></span></div>
+    <div id="rcdet">
+    <div style="border-bottom:1px solid rgba(255,255,255,0.5);"><p style="display:inline-block;" id="rchead">From:</p><p style="display:inline-block; float:right;" id="rchead"> Current Balance</p></div>
+    <p style="display:inline-block;">{{receipt.sendfrom}}</p><p style="display:inline-block; float:right;">{{fromuser.balance}}</p>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.5);"><p style="display:inline-block;" id="rchead">To:</p><p style="display:inline-block; float:right;" id="rchead"> Current Balance</p></div>
+    <p style="display:inline-block;">{{receipt.sendto}}</p><p style="display:inline-block; float:right;">{{touser.balance}}</p>
+    <p id="rchead" style="text-align:center;">Date & Time:</p>
+    <p style="text-align:center; font-size:18px;">{{receipt.date}}</p>
+    </div>
+</div>
+{% endblock %}

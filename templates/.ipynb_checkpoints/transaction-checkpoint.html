@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+{% block content %}
+<h1 style="text-align:center;">Transaction History</h1>
+<table>
+    <tr>
+        <th>Sender</th>
+        <th>Reciever</th>
+        <th>Amount</th>
+        <th>Date & Time</th>
+    </tr>
+    {% for i in allhistory %}
+    <tr><td>{{i.sendfrom}}</td><td>{{i.sendto}}</td><td>{{i.amount}}</td><td>{{i.date}}</td></tr>
+    {% endfor %}
+</table>
+<br><br>
+{% endblock %}

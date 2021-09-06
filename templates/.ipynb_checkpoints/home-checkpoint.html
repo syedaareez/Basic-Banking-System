@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel='stylesheet' href="{% static 'style.css' %}" />
+    </head>
+    <body>
+        <ul>
+          <li><a class="active" href="{% url 'app:home' %}">Home</a></li>
+          
+          <li style="float:right"><a href="{% url 'app:transaction' %}">Transaction history</a></li>
+          <li style="float:right; border-left:1px solid #bbb;"><a href="{% url 'app:userlist' %}">Users List</a></li>
+        </ul>
+        {% block content %}
+        <div class="intro" ><div class="det"><div id="logo">AAREEZ BANK</div><span id="deta">The easiest way<br>to manage your<br>personal finances!</span><br><br> <p>Select a user, pay to another user, check transaction<br>history and get another feature worldwide!</p></div></div>
+        {% endblock %}
+    </body>
+</html>
