@@ -6,26 +6,30 @@
 <h1>Transaction</h1>
 <form action="{% url 'app:sendform' %}" method="POST">
     {% csrf_token %}
+<div  class="userListTable">
 <table>
     <tr>
     <th>Payment From</th>
-    <th>Your Balance</th>
-    <th>Payment To</th>
-    <th>Payment Amount</th>
+    <td><input name="sendfrom" style="background:transparent; color:white; font-family:monospace; border:none; readonly:true; outline:none;" value="{{user.name}}" readonly/></td>
     </tr>
     <tr>
-        <td><input name="sendfrom" style="background:transparent; color:white; font-family:monospace; border:none; readonly:true; outline:none;" value="{{user.name}}" readonly/></td>
-        
-        <td>{{user.balance}}</td>
-
-<td><select class="select" name="sendto">
-    {% for i in allUsers %}
-    <option>{{i.name}}</option>
-    {% endfor %}
-    </select></td>
-        <td><input type="search" name="amount"></td>
+    <th>Your Balance</th>
+    <td>{{user.balance}}</td>
+    </tr>
+    <tr>
+    <th>Payment To</th>
+    <td><select class="select" name="sendto">
+        {% for i in allUsers %}
+        <option>{{i.name}}</option>
+        {% endfor %}
+        </select></td>
+    </tr>
+    <tr>
+    <th>Payment Amount</th>
+    <td><input type="search" name="amount"></td>
     </tr>
 </table>
+</div>
     <input type="submit" class="confirmbtn" value="Confirm"/>
     </form>
     

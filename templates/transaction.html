@@ -2,6 +2,7 @@
 {% extends 'home.html' %}
 {% block content %}
 <h1 style="text-align:center;">Transaction History</h1>
+<div class="userListTable">
 <table>
     <tr>
         <th>Sender</th>
@@ -13,5 +14,6 @@
     <tr><td>{{i.sendfrom}}</td><td>{{i.sendto}}</td><td>{{i.amount}}</td><td>{{i.date}}</td></tr>
     {% endfor %}
 </table>
+</div>
 <br><br>
 {% endblock %}

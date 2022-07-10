@@ -3,16 +3,55 @@
 <html>
     <head>
         <link rel='stylesheet' href="{% static 'style.css' %}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            ul{
+                display:flex;
+            }
+            .mainContainer{
+                display: flex; flex-direction: column; height:screen;
+            }
+            @media only screen and (max-width: 1000px) {
+                #deta{
+                    margin:50px 0 50px 0; font-size: 35px;
+                }
+                #logo{
+                    margin:0;
+                }
+                .det{
+                    height: screen; width: 80%; margin: 0; display: flex; flex-direction: column; padding:30px; margin:auto;
+                }
+                #forgrow{
+                    flex-grow:1;
+                }
+                .userListTable{
+                    overflow:auto; width:95%; margin:auto;
+                }
+                .receipt{
+                    width: 98%;
+                }
+            }
+
+        </style>
     </head>
     <body>
-        <ul>
-          <li><a class="active" href="{% url 'app:home' %}">Home</a></li>
-          
-          <li style="float:right"><a href="{% url 'app:transaction' %}">Transaction history</a></li>
-          <li style="float:right; border-left:1px solid #bbb;"><a href="{% url 'app:userlist' %}">Users List</a></li>
+        <div class="mainContainer">
+        <ul >
+          <li style="height:full;"><a class="active" href="{% url 'app:home' %}" style="height:100%; justify-content: center; align-items: center;">Home</a></li>
+          <li style="flex-grow: 1;"></li>
+          <li ><a href="{% url 'app:transaction' %}">Transaction history</a></li>
+          <li><a href="{% url 'app:userlist' %}">Users List</a></li>
         </ul>
         {% block content %}
-        <div class="intro" ><div class="det"><div id="logo">AAREEZ BANK</div><span id="deta">The easiest way<br>to manage your<br>personal finances!</span><br><br> <p>Select a user, pay to another user, check transaction<br>history and get another feature worldwide!</p></div></div>
+        <div class="intro" style="height: full;">
+            <div class="det" style="height: screen; ">
+                <div id="logo">AAREEZ BANK</div>
+                <div id="forgrow"></div>
+                <div id="deta" >The easiest way to manage your personal finances! </div>
+                <p>Select a user, pay to another user, check transaction history and get another feature worldwide!</p>
+            </div>
+        </div>
         {% endblock %}
+        </div>
     </body>
 </html>
